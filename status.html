@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Status</title>
+    <style>
+        body{
+            background-image: url('photo.webp');
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+        .order{
+            margin-left: 10%;
+        }
+        .inner-order{
+            margin-left: 30%;
+            margin-right: 45%;
+            font-size: 20px;
+            box-sizing: content-box;
+            background-color:aliceblue;
+            box-shadow: thistle;
+            shape-margin: 0%;
+        }
+    </style>
+</head>
+<body>
+    <div class="order">
+    <img src="phot1.png" width="150px" height="60px">
+    <div class="inner-order">
+    <h2>Check Order Status</h2>
+    <form action="check_status" method="POST">
+        <label for="customer_name">Enter your name:</label><br>
+        <input type="text" id="customer_name" name="customer_name" required><br><br>
+        <input type="submit" value="Check Status">
+    </form>
+    </div>
+    </div>
+</body>
+</html>

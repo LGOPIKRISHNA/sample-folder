@@ -1,0 +1,14 @@
+.tr{
+    text-align:center;
+    background-color:greenyellow;
+    
+}
+.book1-inside1{
+border-radius:0%;
+display: flex;
+flex-direction: row;
+}
+.inside1{
+   box-sizing: border-box;
+
+}

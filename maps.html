@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Book Deliveries Map</title>
+<style>
+    
+    #map {
+        height: 400px;
+        width: 100%;
+    }
+</style>
+</head>
+<body>
+
+<h1>Book Deliveries Map</h1>
+<div id="map"></div>
+
+<script>
+
+    function initMap() {
+        const map = new google.maps.Map(document.getElementById("map"), {
+            zoom: 3, 
+            center: { lat: 20, lng: 0 } 
+        });
+        const deliveryLocations = [
+    { lat: 16.7570, lng: 80.6496 }, // Mylavaram
+    { lat: 15.8110, lng: 79.9739 }, // Addanki
+    { lat: 17.3850, lng: 78.4867 }, // Hyderabad
+    { lat: 16.5062, lng: 80.6480 }, // Vijayawada
+    { lat: 19.0760, lng: 72.8777 }  // Mumbai
+];
+        deliveryLocations.forEach(location => {
+            new google.maps.Marker({
+                position: location,
+                map: map
+            });
+        });
+    }
+</script>
+<script async defer
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC7BpMjCi-QglYlGeA_lJjt-QW8nH78AlE&callback=initMap">
+</script>
+<footer>
+    <p>© 2024 krishna Bookstore. All rights reserved.</p>
+</footer>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add to Cart Page</title>
+    <style>
+        /* Some basic styles for demonstration purposes */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .book {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        .book img {
+            max-width: 100px;
+            float: left;
+            margin-right: 10px;
+        }
+        .book-details {
+            overflow: hidden;
+        }
+        .book-title {
+            font-weight: bold;
+            margin-top: 0;
+        }
+        .book-price {
+            color: green;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+        .add-to-cart-btn {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Add to Cart Page</h1>
+        <div id="cart-items">
+            <!-- Cart items will be displayed here -->
+        </div>
+    </div>
+
+    <script>
+        // Function to add book to cart
+        function addToCart(bookId, title, price) {
+            // Create a new item element
+            var newItem = document.createElement("div");
+            newItem.classList.add("book");
+            newItem.innerHTML = `
+                <img src="book_cover_${bookId}.jpg" alt="${title}">
+                <div class="book-details">
+                    <h2 class="book-title">${title}</h2>
+                    <div class="book-price">$${price}</div>
+                </div>
+                <button class="add-to-cart-btn" onclick="removeFromCart(this)">Remove</button>
+            `;
+            
+            // Append the item to the cart
+            document.getElementById("cart-items").appendChild(newItem);
+        }
+
+        // Function to remove book from cart
+        function removeFromCart(button) {
+            button.parentNode.remove();
+        }
+
+        // Example of adding books to cart (you'll need to replace this with your actual logic)
+        // This is just a dummy example
+        addToCart(1, "Book 1", 10.99);
+        addToCart(2, "Book 2", 12.99);
+        addToCart(3, "Book 3", 8.99);
+    </script>
+</body>
+</html>

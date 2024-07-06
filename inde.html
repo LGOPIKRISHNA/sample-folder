@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: URL('p.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1, h4 {
+            text-align: center;
+            color: #fff;
+            background-color: #333;
+            padding: 10px;
+            border-radius: 10px;
+        }
+
+        .nav-bar {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .nav-bar a {
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #333;
+            margin: 0 10px;
+        }
+
+        .nav-bar a:hover {
+            background-color: #555;
+        }
+
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-image: URL('p.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+        }
+
+        .book {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .book img {
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .book img:hover {
+            transform: scale(1.1);
+        }
+
+        .book p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h4>Welcome! You can explore the books of your interest here.</h4>
+    <div class="container">
+        <div class="nav-bar">
+            <a href="index.html">Home</a>
+            <a href="contact3.html">Contact Us</a>
+            <a href="about.html">About Us</a>
+            <a href="feedback.html">Feedback</a>
+            <a href="help.html">Help</a>
+        </div>
+        <h1>Online Bookstore</h1>
+        <div class="book-container">
+            <div class="book">
+                <a href="book1.html"><img src="book1.png" alt="Book 1"></a>
+                <p>1. Mohjitvijayji Maharaja Books</p>
+            </div>
+            <div class="book">
+                <a href="book2.html"><img src="book2.png" alt="Book 2"></a>
+                <p>2. Yugbhushansuri Mohjitvijayji Books</p>
+            </div>
+            <div class="book">
+                <a href="book3.html"><img src="p3.png" alt="Book 3"></a>
+                <p>3. Pravin Bhai Moto</p>
+            </div>
+            <div class="book">
+                <a href="book4.html"><img src="p4.png" alt="Book 4"></a>
+                <p>4. Others</p>
+            </div>
+            <div class="book">
+                <a href="book5.html"><img src="p5.png" alt="Book 5"></a>
+                <p>5. Gangotri Granthmala</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

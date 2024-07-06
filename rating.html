@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rating System</title>
+<style>
+    .rating {
+        unicode-bidi: bidi-override;
+        direction: rtl;
+        text-align: center;
+    }
+
+    .rating input {
+        display: none;
+    }
+
+    .rating label {
+        display: inline-block;
+        padding: 5px;
+        font-size: 25px;
+        color: #ccc;
+        cursor: pointer;
+    }
+
+    .rating label:hover,
+    .rating label:hover ~ label,
+    .rating input:checked ~ label {
+        color: #ffca08;
+    }
+
+    .rating input:checked ~ label:hover,
+    .rating label:hover ~ input:checked ~ label {
+        color: #ffc700;
+    }
+
+    .rating label.checked {
+        color: #ffca08;
+    }
+</style>
+</head>
+<body>
+
+<div class="rating">
+    <input type="radio" id="star5" name="rating" value="5">
+    <label for="star5" class="star">&#9733;</label>
+    <input type="radio" id="star4" name="rating" value="4">
+    <label for="star4" class="star">&#9733;</label>
+    <input type="radio" id="star3" name="rating" value="3">
+    <label for="star3" class="star">&#9733;</label>
+    <input type="radio" id="star2" name="rating" value="2">
+    <label for="star2" class="star">&#9733;</label>
+    <input type="radio" id="star1" name="rating" value="1">
+    <label for="star1" class="star">&#9733;</label>
+</div>
+
+<script>
+    // Get all rating labels
+    const ratinglabel = document.querySelectorAll('.rating label');
+
+    // Add click event listener to each label
+    ratingLabels.forEach(label => {
+        label.addEventListener('click', () => {
+            // Remove 'checked' class from all labels
+            ratingLabels.forEach(label => {
+                label.classList.remove('checked');
+            });
+
+            // Add 'checked' class to clicked label and previous labels
+            label.classList.add('checked');
+            let previous = label.previousElementSibling;
+            while (previous) {
+                previous.classList.add('checked');
+                previous = previous.previousElementSibling;
+            }
+        });
+    });
+    
+    // Get all rating labels
+    const ratingLabels = document.querySelectorAll('.rating label');
+
+    // Add click event listener to each label
+    ratingLabels.forEach(label => {
+        label.addEventListener('click', () => {
+            // Remove 'checked' class from all labels
+            ratingLabels.forEach(label => {
+                label.classList.remove('checked');
+            });
+
+            // Add 'checked' class to the clicked label and previous labels
+            label.classList.add('checked');
+            let previous = label.previousElementSibling;
+            while (previous) {
+                previous.classList.add('checked');
+                previous = previous.previousElementSibling;
+            }
+        });
+    });
+
+
+</script>
+
+</body>
+</html>

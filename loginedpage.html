@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <% String email=(String) session.getAttribute("email");
+    %>
+    <% out.println("welcom: "+email);
+    %>
+    <title>Online Book Store</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url('bg.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+        h1 {
+            display: flex;
+            flex-direction: left;
+            margin-top: 20px;
+            padding-left: 40%;
+            color: white;
+        }
+        .search-container {
+            margin-bottom: 20px;
+            padding-left: 20%;
+        }
+        .search-container input[type=search] {
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+        }
+        .search-container input[type=submit] {
+            padding: 10px 20px;
+            font-size: 18px;
+            background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        nav a {
+            padding: 10px 20px;
+            font-size: 16px;
+            text-decoration: none;
+            color: blue;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: rgb(246, 255, 196);
+            border-radius: 15%;
+        }
+        .picture {
+            display: flex;
+            justify-content:left;
+        }
+        .fuc {
+            margin: 20px;
+            cursor: pointer;
+        }
+        .fuc img {
+            width: 300px;
+            height: 300px;
+            transition: width 0.3s, height 0.3s;
+        }
+        img:hover {
+            width: 260px;
+            height: 440px;
+        }
+        h2{
+            display: flex;
+            flex-direction: left;
+            padding: 10px 20px;
+        }
+        img{
+            margin-left: 30px;
+        }
+        footer {
+        background-color:peru;
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+    .container {
+            text-align: center;
+            padding: 10px;
+            
+        }
+        .tag {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+        }
+        .tag .high {
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 2px;
+            cursor: pointer;
+            background-color: rgb(255, 165, 0);
+            color: #fff;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        .tag .high:hover {
+            background-color: #e218df;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-attachment: fixed;
+        }
+
+        .book {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .book img {
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .book img:hover {
+            transform: scale(1.1);
+        }
+
+        .book p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .boxl{
+            background-color: #ffffff;
+            padding: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            background-color: whitesmoke;
+            }
+            .boxl:hover{
+                background-color:burlywood;
+            }
+            button{
+                cursor: pointer;
+            }
+            .side{
+                display: flex;
+                flex-direction: left;
+            }
+    </style>
+</head>
+<body>
+    <h1>BOOKS STORE<div class="search-container"><input type="search" id="o" required placeholder="Search here">
+        <input type="submit" onclick="search()" value="Search"></div></h1>
+    <nav>
+        <a href="log.html">Home</a>
+        <a href="contact2.html">Contact Us</a>
+        <a href="about.html">About Us</a>
+        <a href="feedback2.html">Feedback</a>
+        <a href="cart.jsp">Added Cart</a>
+        <a href="maps.html" title="Our books delivered locations">Maps</a>
+        <a href="profile.html" title="Profile">Profile</a>
+ 
+    <nav>
+        <a href="#" onclick="toggleFiction()">Fiction</a>
+    </nav>
+    <nav>
+        <a href="#" onclick="togglFiction()">Non-fiction</a>
+    </nav>
+    <nav>
+        <a href="#" onclick="toggFiction()">Children's Books</a>
+    </nav>
+    <nav>
+        <a href="#" onclick="toFiction()">Specialty Books</a>
+    </nav>
+    </nav>
+
+
+
+
+    <ul id="fictionGenres" style="display: none;">
+        <li><h2><a href="#" onclick="fun()">Novels</a></h2></li>
+        <li><h2><a href="#" onclick="fun0()">Short Stories</a></h2></li>
+    </ul>
+    <ul id="fictionGenresimg" style="display: none;">
+        <div class="side">
+        <h2><div class="boxl">
+            <div class="book"><a href="book12-inside12.html"><img src="novel-book1.jpg" width="240px" height="430px" alt="Book 1"></a>
+                <hr>
+                <h3>Price: RS.120/-(RS.<s>150</s>/-)</h3>
+                <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div></div><br>
+        <h2><div class="boxl">
+                    <div class="book"><a href="book12-inside12.html"><img src="novel-book2.jpg" width="240px" height="430px" alt="Book 1"></a>
+                        <hr>
+                        <h3>Price: RS.120/-(RS.<s>150</s>/-)</h3>
+                        <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div></div><br>
+        <h2><div class="boxl">
+                            <div class="book"><a href="book12-inside12.html"><img src="novel-book3.jpg" width="240px" height="430px" alt="Book 1"></a>
+                                <hr>
+                                <h3>Price: RS.120/-(RS.<s>150</s>/-)</h3>
+                                <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div></div><br>
+        <h2><div class="boxl">
+                                    <div class="book"><a href="book12-inside12.html"><img src="novel-book4.jpg" width="240px" height="430px" alt="Book 1"></a>
+                                        <hr>
+                                        <h3>Price: RS.120/-(RS.<s>150</s>/-)</h3>
+                                        <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div></div><br>
+                                    </div>
+    </ul>
+
+    <ul id="fictionGenresimgg" style="display: none;">
+        <h2><a href="book12.html"><img src="novel2-book1.jpg" width="240px" height="430px" alt="Book 1"></a><br>
+        <a href="book22.html"><img src="novel2-book2.jpg" width="240px" height="430px" alt="Book 2"></a><br>
+        <a href="book32.html"><img src="novel2-book3.jpg" width="240px" height="430px" alt="Book 3"></a><br>
+        <a href="book42.html"><img src="novel2-book4.jpg" width="240px" height="430px" alt="Book 4"></a><br></h2>
+    </ul>
+
+    <script>
+        function toggleFiction() {
+            var fictionGenres = document.getElementById("fictionGenres");
+            if (fictionGenres.style.display === "none") {
+                fictionGenres.style.display = "block";
+            } else {
+                fictionGenres.style.display = "none";
+            }
+        }
+        function fun() {
+            var fictionGenresimg = document.getElementById("fictionGenresimg");
+            if (fictionGenresimg.style.display === "none") {
+                fictionGenresimg.style.display = "block";
+            } else {
+                fictionGenresimg.style.display = "none";
+            }
+        }
+
+        function fun0() {
+            var fictionGenresimgg = document.getElementById("fictionGenresimgg");
+            if (fictionGenresimgg.style.display === "none") {
+                fictionGenresimgg.style.display = "block";
+            } else {
+                fictionGenresimgg.style.display = "none";
+            }
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="fictioGenres" style="display: none;">   
+    <li><h2><a href="#" onclick="fun1()">Biography/Autobiography</a></h2></li>
+    <li><h2><a href="#" onclick="fun11()">Memoir</a></h2></li>
+    <li><h2><a href=#" onclick="fun111()">Travel</a></h2></li>
+</ul>
+
+<ul id="fictionGenres1" style="display: none;">
+    <h2><a href="book12.html"><img src="non-book1.jpg" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="non-book2.jpg" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="non-book3.jpg" width="240px" height="430px" alt="Book 3"></a><br>
+    <a href="book42.html"><img src="non-book4.jpg" width="240px" height="430px" alt="Book 4"></a><br></h2>
+</ul>
+
+<ul id="fictionGenres2" style="display: none;">
+    <h2><a href="book12.html"><img src="non-book5.jpg" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="non-book6.jpg" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="non-book7.webp" width="240px" height="430px" alt="Book 3"></a><br>
+    <a href="book42.html"><img src="non-book8.jpg" width="240px" height="430px" alt="Book 4"></a><br></h2>
+</ul>
+<ul id="fictionGenres3" style="display: none;">
+    <h2><a href="book12.html"><img src="travel-book1.jpg" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="travel-book2.jpg" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="travel-book3.jpg" width="240px" height="430px" alt="Book 3"></a><br>
+    <a href="book42.html"><img src="travel-book4.jpg" width="240px" height="430px" alt="Book 4"></a><br></h2>
+</ul>
+<script>
+    function togglFiction() {
+        var fictioGenres = document.getElementById("fictioGenres");
+        if (fictioGenres.style.display === "none") {
+            fictioGenres.style.display = "block";
+        } else {
+            fictioGenres.style.display = "none";
+        }
+    }
+    function fun11() {
+            var fictionGenres2 = document.getElementById("fictionGenres2");
+            if (fictionGenres2.style.display === "none") {
+                fictionGenres2.style.display = "block";
+            } else {
+                fictionGenres2.style.display = "none";
+            }
+        }
+    function fun1() {
+            var fictionGenres1 = document.getElementById("fictionGenres1");
+            if (fictionGenres1.style.display === "none") {
+                fictionGenres1.style.display = "block";
+            } else {
+                fictionGenres1.style.display = "none";
+            }
+        }
+
+    function fun111() {
+            var fictionGenres3 = document.getElementById("fictionGenres3");
+            if (fictionGenres3.style.display === "none") {
+                fictionGenres3.style.display = "block";
+            } else {
+                fictionGenres3.style.display = "none";
+            }
+        }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<ul id="fictiGenres" style="display: none;"> 
+    <li><h2><a href="#" onclick="fun22()">Picture Books</a></h2></li>
+    <li><h2><a href="#" onclick="fun2()">Early Readers</a></h2></li>
+    <li><h2><a href="#" onclick="fun222()">Chapter Books</a></h2></li>
+</ul>
+<ul id="fictionGenres11" style="display: none;">
+    <h2><a href="book12.html"><img src="pic-book1.webp" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="pic-book2.webp" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="pic-book3.webp" width="240px" height="430px" alt="Book 3"></a><br>
+</ul>
+
+<ul id="fictionGenres22" style="display: none;">
+    <h2><a href="book12.html"><img src="ear-book1.webp" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="ear-book2.webp" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="ear-book3.webp" width="240px" height="430px" alt="Book 3"></a><br>
+</ul>
+<ul id="fictionGenres33" style="display: none;">
+    <h2><a href="book12.html"><img src="chapter-book1.webp" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="chapter-book2.webp" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="chapter-book3.webp" width="240px" height="430px" alt="Book 3"></a><br>
+</ul>
+
+<script>
+    function toggFiction() {
+        var fictiGenres = document.getElementById("fictiGenres");
+        if (fictiGenres.style.display === "none") {
+            fictiGenres.style.display = "block";
+        } else {
+            fictiGenres.style.display = "none";
+        }
+    }
+    function fun22() {
+            var fictionGenres11 = document.getElementById("fictionGenres11");
+            if (fictionGenres11.style.display === "none") {
+                fictionGenres11.style.display = "block";
+            } else {
+                fictionGenres11.style.display = "none";
+            }
+        }
+    function fun2() {
+            var fictionGenres22 = document.getElementById("fictionGenres22");
+            if (fictionGenres22.style.display === "none") {
+                fictionGenres22.style.display = "block";
+            } else {
+                fictionGenres22.style.display = "none";
+            }
+        }
+
+    function fun222() {
+            var fictionGenres33 = document.getElementById("fictionGenres33");
+            if (fictionGenres33.style.display === "none") {
+                fictionGenres33.style.display = "block";
+            } else {
+                fictionGenres33.style.display = "none";
+            }
+        }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<ul id="ficGenres" style="display: none;">
+    <li><h2><a href="#" onclick="fun333()">Professional/Technical Books</a></h2></li>
+    <li><h2><a href="#" onclick="fun33()">Graphic Novels/Comics</a></h2></li>
+    <li><h2><a href="#" onclick="fun3()">Poetry</a></h2></li>
+</ul>
+<ul id="fictionGenres44" style="display: none;">
+    <h2><a href="book12.html"><img src="pro-book1.webp" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="pro-book2.webp" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="pro-book3.webp" width="240px" height="430px" alt="Book 3"></a><br>
+    <a href="book42.html"><img src="pro-book4.webp" width="240px" height="430px" alt="Book 4"></a><br></h2>
+</ul>
+
+<ul id="fictionGenres444" style="display: none;">
+    <h2><a href="book12.html"><img src="Gra-book1.webp" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="Gra-book2.webp" width="240px" height="430px" alt="Book 2"></a><br>
+    <a href="book32.html"><img src="Gra-book3.webp" width="240px" height="430px" alt="Book 3"></a><br>
+</ul>
+<ul id="fictionGenres4" style="display: none;">
+    <h2><a href="book12.html"><img src="Poetry-book1.webp" width="240px" height="430px" alt="Book 1"></a><br>
+    <a href="book22.html"><img src="Poetry-book2.webp" width="240px" height="430px" alt="Book 2"></a><br></h2>
+</ul>
+
+<script>
+    function toFiction() {
+        var ficGenres = document.getElementById("ficGenres");
+        if (ficGenres.style.display === "none") {
+            ficGenres.style.display = "block";
+        } else {
+            ficGenres.style.display = "none";
+        }
+    }
+    function fun33() {
+            var fictionGenres444 = document.getElementById("fictionGenres444");
+            if (fictionGenres444.style.display === "none") {
+                fictionGenres444.style.display = "block";
+            } else {
+                fictionGenres444.style.display = "none";
+            }
+        }
+    function fun3() {
+            var fictionGenres4 = document.getElementById("fictionGenres4");
+            if (fictionGenres4.style.display === "none") {
+                fictionGenres4.style.display = "block";
+            } else {
+                fictionGenres4.style.display = "none";
+            }
+        }
+
+    function fun333() {
+            var fictionGenres44 = document.getElementById("fictionGenres44");
+            if (fictionGenres44.style.display === "none") {
+                fictionGenres44.style.display = "block";
+            } else {
+                fictionGenres44.style.display = "none";
+            }
+        }
+</script>
+
+
+
+<div class="book-container">
+    <form action="view.jsp">
+    <div class="boxl">
+    <div class="book">
+    <img src="chapter-book2.webp"></div>
+    <hr>
+        <h2 value="100" name="view1">Price: RS.100/-(RS.<s>180</s>/-)</h2>
+        <a href="#"><button>view Details</button></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="buy.html"><button>Buy</button></a>
+    </div>
+    </form>
+    <form action="view1.jsp">
+   <div class="boxl">
+        <div class="book"><img src="pic-book1.webp"></div>
+        <hr>
+        <h2>Price: RS.120/-(RS.<s>200</s>/-)</h2>
+        <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button>
+    </div>
+    </form>
+    <div class="boxl"> <div class="book"><img src="non-book1.jpg"></div>
+    <hr>
+    <h2>Price: RS.150/-(RS.<s>199</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="novel-book1.jpg"></div><hr>
+    <h2>Price: RS.120/-(RS.<s>150</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="novel-book2.jpg"></div><hr>
+    <h2>Price: RS.150/-(RS.<s>200</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="pic-book3.webp"></div><hr>
+    <h2>Price: RS.180/-(RS.<s>220</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="ear-book1.webp"></div><hr>
+    <h2>Price: RS.160/-(RS.<s>250</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="ear-book2.webp"></div><hr>
+    <h2>Price: RS.200/-(RS.<s>280</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="chapter-book1.webp"></div><hr>
+    <h2>Price: RS.250/-(RS.<s>299</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+    <div class="boxl">
+    <div class="book"><img src="chapter-book3.webp"></div><hr>
+    <h2>Price: RS.230/-(RS.<s>250</s>/-)</h2>
+    <button>view Details</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button>Buy</button></div>
+ 
+</div>
+
+
+
+
+
+
+
+
+
+    <script>
+        function search() {
+            var input = document.getElementById("o").value.toLowerCase();
+            switch (input) {
+                case "mmb":
+                case "1":
+                    window.open('book12.html');
+                    break;
+                case "ymb":
+                case "2":
+                    window.open('book22.html');
+                    break;
+                case "pbm":
+                case "3":
+                    window.open('book32.html');
+                    break;
+                case "others":
+                case "4":
+                    window.open('book42.html');
+                    break;
+                case "ggb":
+                case "5":
+                    window.open('book52.html');
+                    break;
+                case "":
+                    alert("Please fill the search field");
+                    break;
+                default:
+                    alert("Book not found");
+            }
+        }
+    </script>
+    <footer>
+        <p>Thank you for visiting our bookstore. We appreciate your support!</p>
+        <p>&copy; 2024 Our Bookstore. All rights reserved.</p>
+    </footer>
+</body>
+</html>

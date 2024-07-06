@@ -1,0 +1,16 @@
+body{
+background-image:url('thanks.webp');
+background-repeat:no-repeat;
+background-size:cover;
+}
+.n{
+background-color:orange;
+text-align:left;
+margin-left:0px;
+margin-right:0px;
+position:relative;
+}
+.bottom{
+float:right;
+
+}

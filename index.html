@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Book Store</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-color: darksalmon;
+            background-attachment: fixed;
+        }
+        .container {
+            text-align: center;
+            padding: 10px;
+            
+        }
+        .title {
+            font-style: italic;
+            font-size: 50px;
+            text-align: center;
+            color: rgba(255, 158, 30, 0.466);
+            text-decoration: underline;
+            animation: krishna 4s infinite alternate-reverse;
+        }
+        @keyframes krishna {
+            0% { color: brown; margin-left: 79px; }
+            25% { color: bisque; margin-left: 79px; }
+            50% { color: orange; margin-left: 79px; }
+            75% { color: cyan; margin-left: 79px; }
+            100% { color: orangered; margin-left: 79px; }
+        }
+        .tag {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            background-color: bisque;
+        }
+        .tag .high {
+            margin: 10px;
+            padding: 10px 20px;
+            border-radius: 2px;
+            cursor: pointer;
+            background-color: rgb(255, 165, 0);
+            color: #fff;
+            font-size: 17px;
+            text-decoration: none;
+        }
+        .tag .high:hover {
+            background-color: #e218df;
+        }
+        .sort {
+            margin-top: 50px;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .sort img {
+            width: 150px;
+            height: auto;
+            margin: 10px;
+            border-radius: 5px;
+        }
+        .footer {
+            margin-top: 50px;
+            background-color: blanchedalmond;
+            padding: 20px;
+            text-align: center;
+            font-size: 20px;
+        }
+        footer a {
+            color: #333;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        .book-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            background-attachment: fixed;
+        }
+
+        .book {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .book img {
+            width: 200px;
+            height: 250px;
+            border-radius: 10px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .book img:hover {
+            transform: scale(1.1);
+        }
+
+        .book p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .boxl{
+            background-color: #ffffff;
+            padding: 10px;
+            margin-top: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 280px;
+            background-color: whitesmoke;
+            }
+            .boxl:hover{
+                background-color:burlywood;
+            }
+            button{
+                cursor: pointer;
+            }
+    </style>
+</head>
+<body>
+    
+    <script>
+        function log()
+        {
+            alert('please register');
+            window.open("register.html");
+        }
+    </script>
+    <div class="container">
+        <div class="title"><img src="good.webp" width="10%" height="10%"> Online Book Store</div>
+        <div class="tag">
+            <div class="high" onclick="fun0()">Register</div>
+            <div class="high" onclick="fun()">Login</div>
+            <div class="high" onclick="fun1()">Contact Us</div>
+            <div class="high" onclick="fun2()">About Us</div>
+            <a href="cart.jsp"><div class="high" >Cart</div></a>
+            <div class="high" onclick="fun3()">Track Your Order</div>
+            <div class="high" onclick="fun4()">Help</div>
+            
+        </div>
+        <div class="book-container">
+            <form>
+                <div class="boxl">
+                    <div class="book"><img src="chapter-book2.webp"></div>
+                    <hr>
+                    <h2 name="title" value="the horse"></h2>
+                    <h2 value="100" name="price">Price: RS.100/-(RS.<s>180</s>/-)</h2>
+                    <button><a href="view13.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button>
+                </div>
+            </form>
+            
+            <form >
+           <div class="boxl">
+                <div class="book"><img src="pic-book1.webp"></div>
+                <hr>
+                <h2 value="100" name="price">Price: RS.120/-(RS.<s>200</s>/-)</h2>
+                <button><a href="view11.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button>
+            </div>
+            </form>
+            <form>
+            <div class="boxl"> <div class="book"><img src="non-book1.jpg"></div>
+            <hr>
+            <h2>Price: RS.150/-(RS.<s>199</s>/-)</h2>
+            <button><a href="view12.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form>
+            <div class="boxl">
+            <div class="book"><img src="novel-book1.jpg"></div><hr>
+            <h2 value="100" name="price">Price: RS.120/-(RS.<s>150</s>/-)</h2>
+            <button><a href="view14.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form >
+            <div class="boxl">
+            <div class="book"><img src="novel-book2.jpg"></div><hr>
+            <h2 value="100" name="price">Price: RS.150/-(RS.<s>200</s>/-)</h2>
+            <button><a href="view15.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form >
+            <div class="boxl">
+            <div class="book"><img src="pic-book3.webp"></div><hr>
+            <h2>Price: RS.180/-(RS.<s>220</s>/-)</h2>
+            <button><a href="view16.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form >
+            <div class="boxl">
+            <div class="book"><img src="ear-book1.webp"></div><hr>
+            <h2>Price: RS.160/-(RS.<s>250</s>/-)</h2>
+            <button><a href="view17.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form >
+            <div class="boxl">
+            <div class="book"><img src="ear-book2.webp"></div><hr>
+            <h2>Price: RS.200/-(RS.<s>280</s>/-)</h2>
+            <button><a href="view18.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form >
+            <div class="boxl">
+            <div class="book"><img src="chapter-book1.webp"></div><hr>
+            <h2>Price: RS.250/-(RS.<s>299</s>/-)</h2>
+            <button><a href="view19.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+            <form >
+            <div class="boxl">
+            <div class="book"><img src="chapter-book3.webp"></div><hr>
+            <h2>Price: RS.230/-(RS.<s>250</s>/-)</h2>
+            <button><a href="view20.jsp">view Details</a></button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="log()">Buy</button></div>
+            </form>
+         
+        </div>
+    </div>
+    <div class="footer">
+        <h3>We Are Special Partners With:</h3>
+        <hr>
+        <a href="phoneto:9573059954"><img src="phone-call.png" width="30px" height="50px"></a> |
+        <a href="mailto:lgopikrishna84@gmail.com"><img src="envelope.png" width="30px" height="50px"></a> |
+        <a href="https://www.linkedin.com/in/l-gopi-krishna-70b341288?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><img src="linkedin.png" width="30px" height="50px"></a> |
+        <a href="https://www.theindianbookstore.in/">The Indian Book Store</a> |
+        <a href="https://www.crossword.in/">Crossword</a> |
+        <a href="https://www.bookshopofindia.com/">Book Shop of India</a> |
+        <a href="https://www.bagchee.com/">Bagchee Books Store</a> |
+        <a href="https://theculturetrip.com/asia/india/articles/famous-bookstores-across-india">Culture Trip</a> |
+        <a href="https://www.bookswagon.com/">Book Swagon</a> |
+        <a href="https://www.indiabookstore.net/">India Book Store</a> |
+        <a href="https://champaca.in/">Champaca</a> |
+        <a href="https://www.atlanticbooks.com/">Atlantic Books</a> |
+        <a href="https://www.flipkart.com/books-store">Flipkart</a> |
+        <a href="https://99bookstores.com/?gad_source=1&gclid=CjwKCAjwwr6wBhBcEiwAfMEQs7yEst0HFKcJbSy_-BbhYhjbuSyDWBnQ0UVztrgWJkJwRpn_tWb0uRoC1S4QAvD_BwE">99bookstores</a>
+        <hr>
+        &copy; 2024 Our Bookstore. All rights reserved.
+    </div>
+    <script>
+        function fun0() {
+            window.open('register.html');
+        }
+        function fun() {
+            window.open('login.html');
+        }
+        function fun1() {
+            window.open('contact.html');
+        }
+        function fun2() {
+            window.open('about1.html');
+        }
+        function fun3() {
+            window.open('status.html');
+        }
+        function fun4() {
+            window.open('help.html');
+        }
+    </script>
+</body>
+</html>

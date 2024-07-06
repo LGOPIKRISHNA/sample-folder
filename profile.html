@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            background-color: #FFA500; /* Red-Orange-Yellow */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            text-align: center;
+            margin: 0 auto;
+            max-width: 600px;
+            padding-top: 50px;
+        }
+        .total {
+            text-align: left;
+            margin-left: 20%;
+            margin-right: 20%;
+            text-decoration: dotted;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+        }
+        button {
+            background-color: #FF6347; /* Tomato */
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #FF4500; /* Orange Red */
+        }
+        hr {
+            border: 1px solid #FF8C00; /* Dark Orange */
+            margin-top: 20px;
+        }
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        ul li {
+            color: #FFFFFF; /* WhiteSmoke */
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="total">
+            <fieldset>
+                <legend>User Profile</legend>
+                <form>
+                    <button type="submit"><a href="viewprofile.jsp">View Profile</a></button>
+                </form>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>Add To Cart</legend>
+                <form action="addcart.jsp" method="POST">                    
+                    <button type="submit">Add To Cart</button>
+                </form>
+            </fieldset>
+            
+            
+            <hr>
+            <fieldset>
+                <legend>Change Password</legend>
+                <form action="changepwd.html" method="POST">
+                    <button type="submit">Change Password</button>
+                </form>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>Sign Out</legend>
+                <form action="LogoutServlet" method="post">
+                    <button type="submit">Sign Out</button>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

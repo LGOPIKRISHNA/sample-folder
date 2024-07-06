@@ -1,0 +1,239 @@
+<html>
+    <head>
+         <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <h1><center  class="fon1">BOOKS-STORE</center></h1>
+        <style>
+            .main{
+                margin-left:1px;
+                background-color: bisque;
+                border-radius: 10px;
+                border-color:blue;
+                display:flex;
+                flex-direction: 10px;
+                padding-left: 69px;
+                padding-right: 1px;
+                font-size: 30px;
+                font-style: italic;
+            }
+            .sub{
+                padding: 40px;
+                cursor: pointer;
+            }
+            .sub:hover{
+                background-color: rgb(246, 255, 196);
+                border-radius:15%;
+                border-width: 15%;
+                border-style: white;
+            }
+            body{
+                background-image: url('background.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .left{
+                float:left;
+                box-sizing: content-box;
+                border-radius: 10px;
+                border-color: blueviolet;
+                color:whitesmoke;
+                display: flex;
+               position: fixed;
+                flex-direction: left;
+
+            }
+            .fly{
+                
+                padding:20px;
+                flex-direction: left;
+            }
+            .fon{
+                display: flex;
+                flex-direction: left;
+                background-color: black;
+                display:inline-block;
+            
+                font-size: 50px;
+                color:rgba(255, 158, 30, 0.466);
+                text-decoration: underline;
+                animation-name:gopi;
+                animation-delay: 0s;
+                animation-duration: 4s;
+                animation-iteration-count: infinite;
+                animation-timing-function: linear;
+                
+            }
+            .fon1{
+                display: flex;
+                flex-direction: left;
+                margin-left: 500px;
+                
+                font-size: 50px;
+                color:rgba(255, 158, 30, 0.466);
+                text-decoration: underline;
+                animation-name:gopi1;
+                animation-delay: 0s;
+                animation-duration: 3s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                animation-timing-function: linear;
+            }
+            .fon2{
+                display: flex;
+                flex-direction: left;
+                margin-left: 500px;
+                
+                font-size: 50px;
+                color:rgba(255, 158, 30, 0.466);
+                text-decoration: underline;
+                animation-name:gopi2;
+                animation-delay: 0s;
+                animation-duration: 1s;
+                animation-iteration-count: infinite;
+                animation-direction: alternate-reverse;
+                animation-timing-function: linear;
+            }
+            @keyframes gopi
+            {
+                0%{
+                    color:green;
+                    margin-left:100px;
+                    
+                }
+                50%{
+                    color:cyan;
+                    margin-left:500px;
+                }
+                50%{
+                    color:cyan;
+                    margin-left:500px;
+                }
+                100%{
+
+                    color:deeppink;
+                    margin-left:900px;
+                }
+            }
+            @keyframes gopi1
+            {
+                0%{
+                    color:gold;
+                    
+                    
+                }
+                25%{
+                    color:darkorange;
+                    
+
+
+
+                }
+                50%{
+                    color:cyan;
+                    
+                }
+                75%{
+                    color:greenyellow;
+                    
+                }
+                100%{
+
+                    color:deeppink;
+                    
+                }
+            }
+            @keyframes gopi2
+            {
+                0%{
+                    color:gold;
+                    
+                    
+                }
+                25%{
+                    color:rgb(81, 255, 0);
+                }
+                50%{
+                    color:cyan;
+                    
+                }
+                75%{
+                    color:rgb(64, 255, 47);
+                    
+                }
+                100%{
+
+                    color:rgb(255, 20, 145);
+                    
+                }
+            }
+            
+        </style>
+    </head>
+    <body ><hr>
+        <div class="main">
+            <div class="sub" onclick="t1()">Buy Books</div>
+              <div class="sub" onclick="t2()">Contact Us</div>
+             <div class="sub" onclick="t3()"> About Us</div>
+             <div class="sub"><a href="maps.html" title="our books delivered locations"><img src="google-maps.png" width="45px" height="40px"></a></div>
+             <div class="sub"><a href="addcart.jsp" title="add to cart"><img src="shopping-cart.png" width="45px" height="40px"></a></div>
+             <div class="sub"><a href="profile.html" title="profile"><img src="user.png" width="45px" name="profile" height="40px"></a></div>
+             <div class="sub"><a href="users-alt.html" title="Our Team Members"><img src="users-alt.png" width="45px" height="40px"></a></div>
+</div>
+
+<hr>
+<sample><examples class="fon2">Coming-soon-Books</examples></sample>
+<div class="left">
+   <marquee> <div class="fly"><img src="f1.jpg" width="120px"  height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f2.jpg" width="120px" height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f3.jpg" width="120px" height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f4.jpg" width="120px" height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f1.jpg" width="120px"  height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f2.jpg" width="120px" height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f3.jpg" width="120px" height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    <marquee><div class="fly"><img src="f4.jpg" width="120px" height="250px" onmouseover="fun(this)" onmouseout="bun(this)"></div></marquee>
+    
+</div>
+
+<script>
+    function fun(x)
+    {
+        x.style.width=350;
+        x.style.height=500;
+    }
+    function bun(x)
+    {
+        x.style.width=120;
+        x.style.height=250;
+    }
+    function t1()
+    {
+        //alert('Welcome to Buy Books page');
+        window.open('loginedpage.jsp');
+    }
+    function profile()
+    {
+        window.open('profile.html');
+    }
+    function t2()
+    {
+        
+        window.open('contact2.html');
+    }
+    function t3()
+    {
+        
+        window.open('about.html');
+    }
+    function t4()
+    {
+        
+        window.open('feedback2.html');
+    }
+</script>
+
+
+
+
+
+    </body>
+</html>

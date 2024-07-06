@@ -1,0 +1,295 @@
+
+<web-app metadata-complete="true" version="3.0"  xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+
+    <servlet>
+        <servlet-name>RegisterServlet</servlet-name>
+        <servlet-class>RegisterServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>RegisterServlet</servlet-name>
+        <url-pattern>/register</url-pattern>
+    </servlet-mapping>
+
+    <welcome-file-list>
+        <welcome-file>index.html</welcome-file>
+    </welcome-file-list>
+
+    <servlet>
+        <servlet-name>LoginServlet</servlet-name>
+        <servlet-class>LoginServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+    
+<servlet>
+        <servlet-name>ContactServlet</servlet-name>
+        <servlet-class>ContactServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContactServlet</servlet-name>
+        <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContacServlet</servlet-name>
+        <servlet-class>ContacServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContacServlet</servlet-name>
+        <url-pattern>/contac</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContaServlet</servlet-name>
+        <servlet-class>ContaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContaServlet</servlet-name>
+        <url-pattern>/conta</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>ContServlet</servlet-name>
+        <servlet-class>ContServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ContServlet</servlet-name>
+        <url-pattern>/cont</url-pattern>
+    </servlet-mapping>
+
+
+    <servlet>
+        <servlet-name>ConServlet</servlet-name>
+        <servlet-class>ConServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>ConServlet</servlet-name>
+        <url-pattern>/con</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>feedbackservlet</servlet-name>
+        <servlet-class>feedbackservlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>feedbackservlet</servlet-name>
+        <url-pattern>/feedback</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>feedbacservlet</servlet-name>
+        <servlet-class>feedbacservlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>feedbacservlet</servlet-name>
+        <url-pattern>/feedbac</url-pattern>
+    </servlet-mapping>
+     
+     
+    <servlet>
+        <servlet-name>feedbaServlet</servlet-name>
+        <servlet-class>feedbaServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>feedbaServlet</servlet-name>
+        <url-pattern>/feedba</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+        <servlet-name>feedbServlet</servlet-name>
+        <servlet-class>feedbServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>feedbServlet</servlet-name>
+        <url-pattern>/feedb</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>cpage</servlet-name>
+        <servlet-class>adcart</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>cpage</servlet-name>
+        <url-pattern>/acart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>dpage</servlet-name>
+        <servlet-class>adcartthree</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>dpage</servlet-name>
+        <url-pattern>/ccart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>epage</servlet-name>
+        <servlet-class>adcartfour</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>epage</servlet-name>
+        <url-pattern>/dcart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>fpage</servlet-name>
+        <servlet-class>adcartfive</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>fpage</servlet-name>
+        <url-pattern>/ecart</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>bpage</servlet-name>
+        <servlet-class>adcarttwo</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>bpage</servlet-name>
+        <url-pattern>/bcart</url-pattern>
+    </servlet-mapping>
+
+
+<servlet>
+        <servlet-name>profileservlet</servlet-name>
+        <servlet-class>profileservlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>profileservlet</servlet-name>
+        <url-pattern>/prof</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>changingpassword</servlet-name>
+        <servlet-class>pwdchangeservlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>changingpassword</servlet-name>
+        <url-pattern>/change_password</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>logingout</servlet-name>
+        <servlet-class>LogoutServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>logingout</servlet-name>
+        <url-pattern>/LogoutServlet</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>bookadding</servlet-name>
+        <servlet-class>Addbooks</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>bookadding</servlet-name>
+        <url-pattern>/addingbooks</url-pattern>
+    </servlet-mapping>
+    <servlet>
+        <servlet-name>staffadding</servlet-name>
+        <servlet-class>Addstaff</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>staffadding</servlet-name>
+        <url-pattern>/add_staff</url-pattern>
+    </servlet-mapping>
+
+     <servlet>
+        <servlet-name>checkingstatus</servlet-name>
+        <servlet-class>statuschecking</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>checkingstatus</servlet-name>
+        <url-pattern>/check_status</url-pattern>
+    </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>paymentprocess</servlet-name>
+        <servlet-class>payment_process</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>paymentprocess</servlet-name>
+        <url-pattern>/process_payment</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>paymentprocesstwo</servlet-name>
+        <servlet-class>payment_processtwo</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>paymentprocesstwo</servlet-name>
+        <url-pattern>/process_paymenttwo</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>paymentprocessthree</servlet-name>
+        <servlet-class>payment_processthree</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>paymentprocessthree</servlet-name>
+        <url-pattern>/process_paymentthree</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>paymentprocessfour</servlet-name>
+        <servlet-class>payment_processfour</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>paymentprocessfour</servlet-name>
+        <url-pattern>/process_paymentfour</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>paymentprocessfive</servlet-name>
+        <servlet-class>payment_processfive</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>paymentprocessfive</servlet-name>
+        <url-pattern>/process_paymentfive</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>employee</servlet-name>
+        <servlet-class>detailsemployee</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>employee</servlet-name>
+        <url-pattern>/employeedetails</url-pattern>
+    </servlet-mapping>
+    
+     <servlet>
+        <servlet-name>one</servlet-name>
+        <servlet-class>AddToCartServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>one</servlet-name>
+        <url-pattern>/addtocart</url-pattern>
+    </servlet-mapping>
+</web-app>

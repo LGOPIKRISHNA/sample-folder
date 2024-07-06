@@ -1,0 +1,78 @@
+<html>
+    <head>
+         <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="feedback.css">
+        <script>
+        
+                alert("WECLOME PLEASE GIVE US FEEDBACK");
+            
+        </script>
+         <style>
+            .a{
+                background-color: blanchedalmond;
+                font-size: 10px;
+                padding: 16px;
+                border-radius: 25px;
+            }
+            .a:hover{
+                background-color: chartreuse;
+            }
+            .ha{
+                font-size: 25px;
+                border: 15px solid green;
+                border-radius: 3%;
+                width: fit-content;
+                color: coral;
+                padding: 10px;
+                font-style: italic;
+            }
+            .hak{
+                padding: 20px;
+                 color:white;
+                font-size: 39px;
+            }
+            .haa{
+                box-sizing:content-box;
+                border-radius: 20px;
+                font-size: 25px;
+            }
+            body{
+                background-image: url('feedback.webp');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body><form  action="feedb" method="POST">
+        
+            <center><H1><FONT COLOR="BLUE"><u>FEED-BACK</u></FONT></H1></center>
+        
+        
+        
+            <center>
+        <div class="ha">
+
+                <div class="hak">How do you feel your overall experience?<br></div>
+               <input type="radio" class="ha" name="g" value="good" required>Good</input>
+               <input type="radio" class="hak" name="g" value="better" required>Better</input>
+               <input type="radio" class="hak" name="g" value="worst" required>worst</input><br>
+                <div class="hak">Enter name:<input type="text" placeholder="Enter name" class="a" name="t4" required><br></div>
+                    <div class="hak">Enter email Id:<input type="email" placeholder="krishna12@gmail.com" class="a" name="t5" required  pattern="^[a-zA-Z0-9]+*[@gmail.com]$"><br></div>
+                        <div class="hak">Enter your age:<input type="number" placeholder="Enter age" class="a" name="t6" required ><br></div>
+                            Gender: <input type="radio" name="gender" value="male" class="hak" required>male</input>
+                                <input type="radio" name="gender" value="female" class="hak" required>female</input><br>
+                                    <div ><input type="submit" class="haa" value="submit"></div>
+        </div>
+            </center>
+        
+    </form>
+    <script>
+        function fun()
+        {
+            alert('successfully submited');
+            window.open('log.html');
+        }
+    </script>
+    </body>
+</html>

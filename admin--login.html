@@ -1,0 +1,71 @@
+
+
+<html>
+    <head>
+         <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <center><div class="top1"><img src="phot1.png">
+        <link rel="stylesheet" href="home.css">
+        <style>
+            .bnm{
+                cursor: pointer;
+            }
+            .a{
+                border-color: brown;
+                border-radius:10px;
+                padding:10px;
+                outline-width: 12px;
+                size:40px;
+            
+        }
+        .a:hover{
+            background-color: chocolate;
+            background-clip: border-box;
+        }
+        .b{
+            padding:20px;
+            border-width: 7px;
+            outline-width: 10px;
+        }
+        .b:hover{
+            background-color:chocolate;
+        }
+            body{
+    background-image: url('login.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+}
+        </style>
+        
+    </head>
+    <body>
+        <form onsubmit="login()">
+        <center><br><br><br><br><br><table border="1"><font size="19px">
+        <b>Username:</b><input type="text" placeholder="Enter username" class="a" id="t1" name="t1" required><br>
+        <b>Password:</b><input type="password" placeholder="Enter password" class="a" id="t2" name="t2" required><br>
+        <h1><input type="submit" class="b" value="submit"> </h1>
+        </font>
+        </table>
+        </center>
+        </form>
+        <script>
+            function login()
+                {
+                    var name = document.getElementById("t1").value;
+                    var password = document.getElementById("t2").value;
+                    if(name == "admin" && password == "admin")
+                    {
+                        window.open("admin-login.html");
+                    }
+                    else{
+                        alert("worng password or username");
+                    }
+                }
+            function bun()
+                {
+                    
+                    window.open('admin--login.html');
+                }
+        </script>
+    </body>
+</html>

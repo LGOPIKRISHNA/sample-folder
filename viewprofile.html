@@ -1,0 +1,23 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <p id="un">
+        </p>
+        <p id="ps"></p>
+    </body>
+    <script>
+        window.onload = function(){
+            var name=localStorage.getItem("Username");
+            var pass=localStorage.getItem("Password");
+            display(name,pass);
+        }
+        function display(name,pass)
+        {
+            document.getElementById("un").innerHTML="Hello Mr/Mrs "+name;
+            document.getElementById("ps").innerHTML="Your password "+pass;
+            return false;
+        }
+    </script>
+</html>

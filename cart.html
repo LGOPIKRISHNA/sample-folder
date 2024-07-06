@@ -1,0 +1,18 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Cart</title>
+</head>
+<body>
+    <h1>Items in Cart</h1>
+    <%
+        // Retrieve values from the request
+        String price = request.getParameter("price");
+        String description = request.getParameter("description");
+    %>
+    <p>Price: <%= price %></p>
+    <p>Description: <%= description %></p>
+</body>
+</html>

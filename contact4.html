@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title >
+CONTACT-US
+
+</title>
+
+<style>
+    .cont{
+        font-size: 40px;
+    }
+    .cont:hover{
+        color:chartreuse;
+    }
+    .a{
+        padding:10px;
+        border-radius: 30px;
+    }
+    .a:hover{
+        background-color:rgb(20, 177, 220);
+        color:cadetblue;
+    }
+    .c{
+        padding:20px;
+        font-style: italic;
+        border-radius: 49px;
+        color:black;
+    }
+    .c:hover{
+        background-color:black;
+        color:white;
+    }
+    .b{
+        margin-left: 10px;
+padding: 50px;
+        border-radius: 19px;
+        color:black;
+    }
+    .b:hover{
+        background-color:floralwhite;
+    }
+    .d{
+        font-size: 40px;
+        color: brown;
+        font-style: italic;
+    }
+    .bor{
+        
+        box-sizing: 30px;
+        display: inline-block;
+    }
+    body{
+        background-image: url('opition2.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+</style>
+  </head>
+  <body ><form action="cont" method="POST">
+    <center> 
+    <div class="bor">
+    
+    <h1><u><div class="d">Contact Us</div></h1>
+    
+    <font color="whitesmoke" size="6px">Enter Name:</font><input type="text" class="a" name="ename" required pattern="[a-zA-Z0-9]+" placeholder="Enter name"><br>
+    <font color="whitesmoke" size="6px">Enter Email:</font><input type="email"   class="a" name="eemail" required pattern="^[a-zA-Z0-9]+*[@gmail.com]$" placeholder="krishna@gmail.com"><br>
+    
+    &nbsp;<textarea rows="4" cols="31" name="ecom"  class="b" required  placeholder="Enter comment here"></textarea>
+    <br><br><br>
+    <input type="submit" name="submit" class="c">
+    
+    </button>
+    </div>
+    </center>
+      <h2 class="d">Phone no:<a href="phoneto:9876543219"><div class="cont">9876543219</div></a><br><br>Email:<a href="mailto:lgopikrishna84@gmail.com"><div class="cont">krishna@gmail.com</div></a></h2>
+      </form>
+      <script>
+        function fun()
+        {
+            alert('successfully submited');
+            window.open('t4.html');
+        }
+    
+      </script>
+    </body>
+</html>

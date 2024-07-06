@@ -1,0 +1,94 @@
+<html>
+    <head>
+        <center><font color="green"> <h1> Order Now</h1> </font></center>
+        <style>
+            body{
+                background-image: url("cartpagebackgroundimage.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .big-continer{
+                box-sizing: content-box;
+                border-radius:80%;
+                background-image: url("cartpagebackgroundimage.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+                
+                text-align: center;
+                padding-bottom: 30px;
+                
+            }
+            .big-continer:hover{
+                
+                background-image: url("cartpagebackgroundimage2.jpg");
+            }
+            #big1-continer{
+                box-sizing: border-box;
+                border-radius: 98px;
+            }
+        </style>
+
+<script>
+    function fun(){
+        var a=parseInt(document.getElementById("pin").value);
+        document.getElementById("price").value=a*70;
+    }
+</script>
+    </head>
+    <body >
+        <form action="acart" method="POST">
+        <div class="big-continer">
+
+            <table align="center">
+                <tr>
+                    <th><h3>Cart id</h3></th>
+                    <th>: <input type="number" required name="t1"> </th>
+                </tr>
+                
+                <tr>
+                    <th><h3>Quantity</h3></th>
+                    <th>: <input type="text" id="pin" onblur="fun()" required name="t2"> </th>
+                </tr>
+
+                <tr>
+                    <th><h3>Amount</h3></th>
+                    <th>: <input type="text" id="price" name="t9" disabled> </th>
+                </tr>
+                
+                <tr>
+                    <th><h3>Phone number</h3></th>
+                    <th>: <input type="tel" required name="t3"> </th>
+                </tr>
+
+                <tr>
+                    <th><h3>User Name</h3></th>
+                    <th>: <input type="text" required name="t4"> </th>
+                </tr>
+
+                <tr>
+                    <th><h3>Language</h3></th>
+                    <th>: <input type="text" required name="t5"> </th>
+                </tr>
+
+                <tr>
+                    <th><h3>name of book</h3></th>
+                    <th>: <input type="text" required name="t6"> </th>
+                </tr>
+
+                <tr>
+                    <th><h3>Location</h3></th>
+                    <th>: <input type="text" required name="t7"> </th>
+                </tr>
+
+                <tr>
+                    <th><h3>pincode</h3></th>
+                    <th>: <input type="pincode" required name="t8"> </th>
+                </tr>
+
+                
+            </table>
+            <input type="submit" value="submit">
+        </div>
+        </form>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.tr{
+    text-align:center;
+    background-color:aquamarine;
+}
+.book{
+    flex-direction: row;
+    -ms-flex-align: baseline;
+    text-align: center;
+    size: 100px;
+}
+.to{
+    padding-top: 0%;
+    text-align: top;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Store</title>
+    <style>
+        .main {
+            display: flex;
+            flex-direction: row;
+            padding-left: 10px;
+        }
+        .sub {
+            display: flex;
+            flex-direction: column;
+            margin-left: 30px;
+        }
+        .inside1 {
+            box-sizing: border-box;
+        }
+        .tr {
+            text-align: center;
+            position: flex;
+            background-color: white;   
+        }
+    </style>
+</head>
+<body bgcolor="cyan">
+
+<div class="tr">
+    <h1><font color="orange">
+        <a href="index.html">Home</a>&NonBreakingSpace; &NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+        <a href="contact3.html">Contact_us</a>&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;&NonBreakingSpace;
+    </font></h1>
+</div>
+
+<div class="main">
+    <div class="sub">
+        <div class="inside1">
+            <img src="book3-inside1.jpg" onmouseover="fun(this)" onmouseout="bun(this)"></img>
+            <div>
+                <a href="book33-inside11.html"><button style="font-size:40px;">Buy</button></a>
+                <a href="cart.html?book=Book1&price=10.99"><button style="font-size:40px;">Add To Cart</button></a>
+            </div>
+        </div>
+    </div>&nbsp;
+
+    <div class="sub">
+        <div class="inside1">
+            <img src="book3-inside2.jpg" onmouseover="fun(this)" onmouseout="bun(this)"></img>
+            <div>
+                <a href="book33-inside22.html"><button style="font-size:40px;">Buy</button></a>
+                <a href="cart.html?book=Book2&price=12.99"><button style="font-size:40px;">Add To Cart</button></a>
+            </div>
+        </div>
+    </div>&nbsp;
+
+    <div class="sub">
+        <div class="inside1">
+            <img src="book3-inside3.jpg" onmouseover="fun(this)" onmouseout="bun(this)"></img>
+            <div>
+                <a href="book33-inside33.html"><button style="font-size:40px;">Buy</button></a>
+                <a href="cart.html?book=Book3&price=8.99"><button style="font-size:40px;">Add To Cart</button></a>
+            </div>
+        </div>
+    </div>&nbsp;
+</div>
+
+<script>
+    function fun(x) {
+        x.style.width=450;
+        x.style.height=550;
+    }
+    function bun(x) {
+        x.style.width=350;
+        x.style.height=576;
+    }
+</script>
+
+</body>
+</html>

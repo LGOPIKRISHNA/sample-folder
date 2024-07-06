@@ -1,0 +1,131 @@
+
+
+<html>
+    <head>
+         <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <center><div class="top1"><img src="phot1.png"><div class="top"><font size="5px" color="green"><b><font color="orange" onclick="fun()" class="bnm">Login As Guest</font></a></b></font>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<font size="5px" color="green"><b><font color="orange" onclick="bun()" class="bnm">Admin Login</font></a></b></font></div></center>
+        <link rel="stylesheet" href="home.css">
+        <style>
+            .bnm{
+                cursor: pointer;
+                display: inline-block; 
+                position: relative; 
+                color:; 
+            }
+            .bnm:after{
+                content: ''; 
+                position: absolute; 
+                width: 100%;
+                transform: scaleX(0); 
+                height: 2px;
+                bottom: 0;
+                left: 0; 
+                background-color: orange;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out; 
+            }
+
+            .bnm:hover:after {
+                transform: scaleX(1); 
+                transform-origin: bottom left; 
+            }
+
+
+            .bnm1{
+                cursor: pointer;
+                display: inline-block; 
+                position: relative; 
+                color:; 
+            }
+            .bnm1:after{
+                content: ''; 
+                position: absolute; 
+                width: 100%;
+                transform: scaleX(0); 
+                height: 2px;
+                bottom: 0;
+                left: 0; 
+                background-color: whitesmoke;
+                transform-origin: bottom right;
+                transition: transform 0.25s ease-out; 
+            }
+
+            .bnm1:hover:after {
+                transform: scaleX(1); 
+                transform-origin: bottom left; 
+            }
+
+
+
+            .a{
+                border-color: brown;
+                border-radius:10px;
+                padding:10px;
+                outline-width: 12px;
+                size:40px;
+            
+        }
+        .a:hover{
+            background-color: chocolate;
+            background-clip: border-box;
+        }
+        .b{
+            padding:20px;
+            border-width: 7px;
+            outline-width: 10px;
+        }
+        .b:hover{
+            background-color:chocolate;
+        }
+            body{
+    background-image: url('login.jpeg');
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        </style>
+        
+    </head>
+    <body>
+        <form action="login" method="POST">
+        <center><br><br><br><br><br><table border="1"><font size="19px">
+        <b><div class="bnm1">Username:</div></b><input type="text" placeholder="Enter username"  id="un1" class="a" name="t1" required><br>
+        <b><div class="bnm1">Password:</div></b><input type="password" placeholder="Enter password" id="ps1" class="a" name="t2" required><br>
+        <b><div class="bnm1"><a href="changepwd.html"><font color="red-orange" size="5x">Have you Forgot password?</font></a></div></b>
+        <h1><input type="submit" class="b" value="submit">
+         </h1>
+        </font>
+        
+        </table>
+        </center>
+        </form>
+        <script>
+            function fun()
+                {
+
+                    //alert("Are You sure! You Want login as guest?");
+                    window.open('inde.html');
+                }
+            function bun()
+                {
+                    
+                    window.open('admin--login.html');
+                }
+                function display()
+                {
+                    uname=document.getElementById("un1").value;
+                    pass=document.getElementById("ps1").value;
+                    if(uname.length<1 || pass.length<1)
+                    {
+                        window.alert("Please fill th details");
+                    }
+                    else{
+                        localStorage.setItem("Username",uname);
+                        localStorage.setItem("Password",pass);
+                        window.location.href="viewprofile.html";
+                    }
+                    return false;
+                }
+        </script>
+    </body>
+</html>
